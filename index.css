@@ -1,0 +1,164 @@
+:root {
+    --small: 5px;
+    --medium: 10px;
+    --large: 25px;
+    --border-color: #d6d6d6;
+    --bg-color: #f5f5f5;
+    --grey-text: #9f9f9f;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+}
+
+div.container {
+    display: grid;
+    max-width: 400px;
+    margin: auto;
+    margin-top: var(--large);
+    margin-bottom: var(--large);
+    padding: var(--medium);
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 45px;
+    font-size: 13px;
+    padding: var(--medium) 15px;
+    border: 1px solid var(--border-color);
+}
+
+input:focus {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+div.container > div:first-of-type {
+    position: relative;
+}
+
+ul#searchResultList {
+    border: 1px solid var(--border-color);
+    position: absolute;
+    background-color: white;
+    margin-top: 1px;
+    max-height: 200px;
+    overflow: auto;
+    left: 0;
+    right: 0;
+}
+
+    ul#searchResultList > li {
+        cursor: pointer;
+        padding: var(--medium);
+    }
+
+    ul#searchResultList > li:hover {
+        background-color: var(--bg-color);
+    }
+
+    ul#searchResultList > li.selected {
+        background-color: var(--bg-color);
+    }
+
+div#searchHistory {
+    margin-top: var(--medium);
+    padding: var(--medium);
+}
+
+    div#searchHistory > section {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: var(--medium);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+        div#searchHistory > section > h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        div#searchHistory > section > button {
+            border: none;
+            background: none;
+            text-decoration: underline;
+            margin-left: auto;
+        }
+
+        div#searchHistory > section > button:focus {
+            outline: none;
+        }
+
+    div#searchHistory li {
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.3fr;
+        align-items: center;
+        border-bottom: 1px solid var(--border-color);
+        padding-top: var(--small);
+        padding-bottom: var(--small);
+    }
+    
+        div#searchHistory li > span:last-of-type {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--grey-text);
+            justify-self: right;
+        }
+
+        div#searchHistory li > button {
+            border: none;
+            background: none;
+            color: var(--grey-text);
+            font-size: 16px;
+            width: fit-content;
+            justify-self: right;
+        }
+        div#searchHistory li > button:focus {
+            outline: none;
+        }
+
+div#eventList {
+    margin-top: 10px;
+}
+
+    div#eventList > section {
+        display: grid;
+        background-color: white;
+        grid-template-columns: 1fr 3fr;
+        border: 1px solid var(--border-color);
+    }
+    
+    div#eventList > section + section {
+        margin-top: 3px;
+    }
+
+        div#eventList > section > div {
+            display: flex;
+            flex-direction: column;
+            padding: var(--medium);
+        }
+        
+        div#eventList > section > span {
+            padding: var(--medium);
+        }
+
+        div#eventList > section > div:first-of-type {
+            justify-content: center;
+        }
+
+    div#eventList h1 {
+        margin-top: 0;
+    }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>
+        Delete
+    </button>
+</body>
+</html>
+
+<style>
+    button {
+        background: linear-gradient(0.25turn, #EDAC60, #F19639);
+        color: black;
+        font-weight: 800;
+        width: 272px;
+        height: 142px;
+        font-size: 37px;
+        border: 2px #82807E solid;
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    button::after {
+        position: absolute;
+        left: 150px;
+        top: 20px;
+        content: '';
+        background: white;
+        height: 115px;
+        width: 115px;
+        border-radius: 100%;
+    }
+
+    button::before {
+        position: absolute;
+        left: 180px;
+        top: 15px;
+        content: '\00d7';
+        border-radius: 10px;
+        font-weight: 400;
+        font-size: 95px;
+        z-index: 1;
+    }
+</style>

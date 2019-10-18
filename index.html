@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search for a team and find their upcoming events."/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Team Event Search</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <input id="teamSearch" type="search" name="teamSearch" placeholder="Search for a team..." aria-label="Search for a team" autocomplete="off" autocorrect="off">
+            <ul id="searchResultList" style="display: none;"></ul>
+        </div>
+        <div id="searchHistory">
+            <section>
+                <h1>Search history</h1>
+                <button id="clearSearches" aria-label="Clear search history">Clear search history</button>
+            </section>
+            <ul id="searchHistoryList" style="display: none;"></ul>
+        </div>
+        <div id="eventList"></div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
